@@ -42,7 +42,8 @@ export default class Home_screen extends Component {
             Resturentname:[],
             Foodprice:'',
             subtotal:[],
-            total:""
+            total:"",
+            address:"",
             
         }
     }
@@ -94,8 +95,19 @@ export default class Home_screen extends Component {
              modalopen:false
          })
      };
+    customer_address=(e)=>{
+        this.setState({
+            [e.target.name]: e.target.value  
+            })
+    }
     checkout=()=>{
-         alert("Your order is taken successfully")
+        if(this.state.address.length===0){
+            alert("you are not enter address, plz enter")
+        }
+        else{
+
+            alert("Your order is taken successfully")
+        }
      }
     render() {
         return (
@@ -264,10 +276,11 @@ export default class Home_screen extends Component {
                                                                     <TextField
                                                                         autoFocus
                                                                         margin="dense"
-                                                                        id="name"
+                                                                        name="address"
                                                                         label="Enter your Address"
                                                                         type="text"
                                                                         fullWidth
+                                                                        onChange={this.customer_address}
                                                                     />
                                                                     <div>
                                                                         <Typography variant="h6"> Select payment option</Typography>
@@ -280,11 +293,9 @@ export default class Home_screen extends Component {
                                                                     <Button onClick={this.modalClose} color="primary">
                                                                         Cancel
                                                                     </Button>
-                                                                    <Link href="/Headingbar" underline="none">
-                                                                        <Button onClick={this.checkout} color="primary">
-                                                                            Checkout
-                                                                        </Button>
-                                                                    </Link>
+                                                                    <Button onClick={this.checkout} color="primary">
+                                                                        Checkout
+                                                                    </Button>
                                                                     </DialogActions>
                                                                 </Dialog>                               
                                                             </center>

@@ -1,0 +1,19 @@
+.body{
+    background-color: gray;
+    padding: 20px;
+    height: 570px;
+}
+.timing_btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+@media only screen and (max-width: 800px){
+    .timing_btn{
+        display: flex;
+        flex-direction: column;
+    }
+    .btn{
+        margin-top: 10px;
+    }
+}

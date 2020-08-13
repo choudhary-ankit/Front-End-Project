@@ -1,0 +1,93 @@
+.main_div{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+}
+.aling_item{
+    width: 900px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #24292e;
+    color: white;
+}
+.titel_div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-left: 10px;
+    
+}
+.movies_title{
+    font-size: 50px;
+    font-weight: bold;
+}
+.booking_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  grey;
+    
+}
+.booking_alling{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color:  #24292e;
+    color: white;
+    width: 900px;
+    height: auto;
+    padding: 10px;
+    margin-top: 10px;
+
+}
+.movies_info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color:  grey;
+    
+}
+.movie_type{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color:  #24292e;
+    color: white;
+    width: 900px;
+    height: auto;
+    padding: 10px;
+    margin-top: 10px;
+    margin-top: 10px;
+
+}
+@media only screen and (max-width: 800px){
+    .aling_item{
+        width: 900px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #24292e;
+        color: white;
+    }
+    .booking_alling{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-color:  #24292e;
+        color: white;
+        width: 900px;
+        height: auto;
+        padding: 10px;
+        margin-top: 10px;
+    
+    }
+}

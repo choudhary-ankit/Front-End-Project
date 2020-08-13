@@ -1,0 +1,71 @@
+/* https://www.fast2sms.com/dev/bulk?authorization=0jh4qaoEiJWONkwOujpPL86Ux5gBxV23uiwx3e1QJsG4Blz12NAKIk0isDMB&sender_id=FSTSMS&message="your online purchasing movie ticket OTP is 5524"&variables={AA}&variables_values=5252&language=english&route=p&numbers=7978143053 */
+
+.body{
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+  width: 100%;
+  height: 570px;
+}
+
+.root{
+  margin-top: 50px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+.backButton{
+    margin-right: 1px;
+}
+.instructions {
+   margin-top: 1px;
+   margin-bottom: 1px;
+}
+.center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.textfield_div{
+  margin-top: 10px;
+}
+.next_btn{
+  margin-left: 50%;
+  margin-top: 15%;
+}
+.expire_cv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+.expire{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.textfield_mob{
+  margin-top: 10%;
+}
+.note{
+  font-size: 12px;
+  font-weight: bold;
+  color: red;
+}
+.payment_msg{
+  margin-top: 20%;
+  font-size: 20px;
+  font-weight: bold;
+  color: green;
+}
+@media only screen and (max-width: 800px){
+  .root{
+    margin-top: 50px;
+      /* width: 300px;
+      height: auto; */
+      padding: 10px;
+  }
+  .next_btn{
+    margin-left: 50%;
+    margin-top: 15%;
+  }
+}

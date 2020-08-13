@@ -87,7 +87,7 @@ export default class HeadingBar extends Component {
                                     this.state.data.length>0?
                                        this.state.data.map((e)=>{
                                            return(
-                                                <Link to="/Movies_info" onClick={this.handleClose}>
+                                                <Link href="/Movies_info" onClick={this.handleClose}>
                                                     <Button onClick={() => this.movie_id(e.imdbID)}>
                                                         <Card style={{width:"400px"}}>
                                                         <div className={Style.card_div}>

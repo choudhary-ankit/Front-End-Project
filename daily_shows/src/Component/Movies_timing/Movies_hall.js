@@ -34,17 +34,24 @@ handleClose=()=>{
 handleChange = (e) => {
     this.setState({ [e.target.name]:e.target.checked})
     let checking = e.target.checked
-    let seat_no = e.target.value
-    this.state.seat_no.push(seat_no)
     if(checking===true){
+        let seat_no = e.target.value
+        this.state.seat_no.push(seat_no)
         this.setState({next:false})
+    }
+    else if(checking===false){
+        let seat_no = e.target.value
+        this.state.seat_no.pop(seat_no)
+    }
+    else {
+        this.setState({next:true})
     }
 
 
 }
 proced=()=>{
     this.setState({open:false})
-    if(this.state.A1===true || this.state.A2 === true || this.state.A3){
+    if(this.state.A1===true || this.state.A2 === true || this.state.A3===true){
         localStorage.setItem('A1', this.state.A1); 
         localStorage.setItem('A2', this.state.A2);
         localStorage.setItem('A3', this.state.A3);
@@ -53,15 +60,15 @@ proced=()=>{
     let A2 = localStorage.getItem('A2');
     let A3 = localStorage.getItem('A3');
 
-    if(A1==="null"){
+    if(A1==="null" || A1==="false"){
         localStorage.removeItem('A1')
         this.setState({A1:false, A1_disable:false})
     }
-    if(A2==="null"){
+    if(A2==="null" || A2==="false"){
         localStorage.removeItem('A2')
         this.setState({A2:false, A2_disable:false})
     }
-    if(A3==="null"){
+    if(A3==="null" || A3==="false"){
         localStorage.removeItem('A3')
         this.setState({A3:false, A3_disable:false})
     }

@@ -113,7 +113,7 @@ componentDidMount=()=>{
                             <Checkbox onChange={this.handleChange} inputProps={{ 'aria-label': 'primary checkbox' }} checked={this.state.A3} name="A3" disabled={this.state.A3_disable} value="A3"/>
                         </DialogContent>
                         <DialogActions>
-                            <Link href="/Payment" style={{color:"white"}} underline="none">
+                            <Link href="/payment" style={{color:"white"}} underline="none">
                                 <Button variant="contained" color="primary"onClick={this.proced} disabled={this.state.next}>Proced</Button>
                             </Link>
                         </DialogActions>

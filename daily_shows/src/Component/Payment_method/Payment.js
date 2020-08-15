@@ -130,7 +130,7 @@ export default class Payment extends Component {
                                 <p>Congratulation! <br></br>Your payment is successfull</p>
                             </div>
                             <div className={Style.next_btn}>
-                                <Link href="/User_info" style={{color:"white"}} underline="none">
+                                <Link href="/user_info" style={{color:"white"}} underline="none">
                                     <Button variant="contained" color="primary">Ticket</Button>
                                 </Link>
                             </div>

@@ -13,10 +13,10 @@ export default class App extends Component {
       <div>
         <HeadingBar/>
         <Route path ="/" exact component={Home}></Route>
-        <Route path = "/Movies_info" component = {Movies_info} />
-        <Route path = "/Movies_hall" component = {Movies_hall}></Route>
-        <Route path = "/Payment" component = {Payment}></Route>
-        <Route path = "/User_info" component = {User_info}></Route>
+        <Route path = "/movies_info" component = {Movies_info} />
+        <Route path = "/movies_hall" component = {Movies_hall}></Route>
+        <Route path = "/payment" component = {Payment}></Route>
+        <Route path = "/user_info" component = {User_info}></Route>
       </div>
     )
   }

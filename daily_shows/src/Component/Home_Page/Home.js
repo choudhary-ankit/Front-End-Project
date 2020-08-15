@@ -33,7 +33,7 @@ export default class Home extends Component {
                     {
                         Latest_movies.map((e)=>{
                             return(
-                                <Link to="/Movies_info">
+                                <Link to="/movies_info">
                                     <Button onClick={() => this.set_id(e.movie_id)}>
                                         <Card className={Style.card_size} style={{backgroundColor:"black", color:"grey"}}>
                                             <div>
@@ -58,7 +58,7 @@ export default class Home extends Component {
                     {
                         Action_movies.map((e)=>{
                             return(
-                                <Link to="/Movies_info">
+                                <Link to="/movies_info">
                                     <Button onClick={() => this.set_id(e.movie_id)}>
                                         <Card className={Style.card_size} style={{backgroundColor:"black", color:"grey"}}>
                                             <div>
@@ -83,7 +83,7 @@ export default class Home extends Component {
                     {
                         Thriller_movies.map((e)=>{
                             return(
-                                <Link to="/Movies_info">
+                                <Link to="/movies_info">
                                     <Button onClick={() => this.set_id(e.movie_id)}>
                                         <Card className={Style.card_size} style={{backgroundColor:"black", color:"grey"}}>
                                             <div>
@@ -108,7 +108,7 @@ export default class Home extends Component {
                     {
                         Bollywod_movies.map((e)=>{
                             return(
-                                <Link to="/Movies_info">
+                                <Link to="/movies_info">
                                     <Button onClick={() => this.set_id(e.movie_id)}>
                                         <Card className={Style.card_size} style={{backgroundColor:"black", color:"grey"}}>
                                             <div>
@@ -133,7 +133,7 @@ export default class Home extends Component {
                     {
                         Hollywood_movies.map((e)=>{
                             return(
-                                <Link to="/Movies_info">
+                                <Link to="/movies_info">
                                     <Button onClick={() => this.set_id(e.movie_id)}>
                                         <Card className={Style.card_size} style={{backgroundColor:"black", color:"grey"}}>
                                             <div>

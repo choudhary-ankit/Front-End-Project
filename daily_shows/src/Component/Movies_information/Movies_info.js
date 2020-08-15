@@ -46,7 +46,7 @@ export default class Movies_info extends Component {
                 <div className={Style.booking_div}>
                     <div className={Style.booking_alling}>
                         <Typography variant="body1">Part of The Collection: Action/Comedy/Drama/Musical</Typography>
-                        <Link href = "/Movies_hall" style={{color:"white"}} underline="none">
+                        <Link href = "/movies_hall" style={{color:"white"}} underline="none">
                             <Button variant="contained" color="primary">Booknow</Button>
                         </Link>
                     </div>

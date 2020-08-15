@@ -8,7 +8,7 @@ import Action_movies from '../../Movies_data/Action_movies'
 import Bollywod_movies from '../../Movies_data/Bollywod_movies'
 import Hollywood_movies from '../../Movies_data/Hollywood_movies'
 import Thriller_movies from '../../Movies_data/Thriller_movies'
-import { Link } from 'react-router-dom';
+import { Link} from '@material-ui/core';
 
 export default class Home extends Component {
     constructor(props){
@@ -58,7 +58,7 @@ export default class Home extends Component {
                     {
                         Action_movies.map((e)=>{
                             return(
-                                <Link to="/movies_info">
+                                <Link href="/movies_info" style={{color:"white"}} underline="none">
                                     <Button onClick={() => this.set_id(e.movie_id)}>
                                         <Card className={Style.card_size} style={{backgroundColor:"black", color:"grey"}}>
                                             <div>

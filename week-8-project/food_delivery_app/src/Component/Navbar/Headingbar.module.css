@@ -1,0 +1,101 @@
+
+.form{
+  width: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 100px;
+  
+}
+.icon_button{
+  display: none;
+}
+.search_button{
+    margin-left: 10px;
+}
+.button_div{
+    width: 300px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.login_modal_heading{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+}
+.closebutton {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  color: grey;
+}
+
+
+.center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card_size{
+  padding: 10px;
+  width: 400px;
+  
+}
+.textfield_login{
+  width: 90%;
+  
+}
+.textfield{
+  width: 400px;
+  padding-top: 20px;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .form{
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 50px;
+    
+  }
+  .icon_button{
+    display: unset;
+  }
+  .searchBox{
+    display: none;
+  }
+  .card_size{
+    padding: 10px;
+    width: 300px;
+    
+  }
+  .textfield_login{
+    width: 90%;
+    
+  }
+  .textfield{
+    width: 300px;
+    padding-top: 20px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .form{
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+    
+  }
+  .icon_button{
+    display: unset;
+  }
+  .searchBox{
+    display: none;
+  }
+  
+}

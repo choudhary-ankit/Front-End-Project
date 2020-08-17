@@ -7,7 +7,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogActions from '@material-ui/core/DialogActions';
 import Checkbox from '@material-ui/core/Checkbox';
-import { Link} from '@material-ui/core';
+import {Link} from 'react-router-dom';
 
 export default class Movies_hall extends Component {
 constructor(Props){
@@ -91,8 +91,7 @@ componentDidMount=()=>{
   
     render() {
         
-        return (
-            
+        return ( 
             <div className={Style.body}>
                 <div>
                     <Typography variant="h2" style={{color:"white"}}>CinePolice: P&M Mall</Typography>
@@ -113,7 +112,7 @@ componentDidMount=()=>{
                             <Checkbox onChange={this.handleChange} inputProps={{ 'aria-label': 'primary checkbox' }} checked={this.state.A3} name="A3" disabled={this.state.A3_disable} value="A3"/>
                         </DialogContent>
                         <DialogActions>
-                            <Link href="/payment" style={{color:"white"}} underline="none">
+                            <Link to="/payment" style={{color:"white",textDecoration:"none"}}>
                                 <Button variant="contained" color="primary"onClick={this.proced} disabled={this.state.next}>Proced</Button>
                             </Link>
                         </DialogActions>

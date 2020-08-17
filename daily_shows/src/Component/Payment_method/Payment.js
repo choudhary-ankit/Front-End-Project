@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Style from './Payment.module.css'
-import { makeStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
@@ -9,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import TextField from '@material-ui/core/TextField';
 import axios from 'axios'
-import { Link} from '@material-ui/core';
+import {Link} from 'react-router-dom';
 
 
 export default class Payment extends Component {
@@ -38,16 +37,16 @@ export default class Payment extends Component {
     }
     handleNext = () => {
         if(this.state.activeStep ===0){
-            if(this.state.card_name.length===0){
+            if(this.state.card_name.length===0 ){
                 alert("plz fill CardHolder Name")
             }
-            else if(this.state.card_no.length<12){
+            else if(this.state.card_no.length<=12 || this.state.card_no.length>=16){
                 alert("your are enter wrong card no")
             }
-            else if(this.state.card_exp.length<5){
+            else if(this.state.card_exp.length>5 || this.state.card_exp.length<5){
                 alert("you are enter wrong expire date")
             }
-            else if(this.state.card_cv.length<3){
+            else if(this.state.card_cv.length>3 ||this.state.card_cv.length<3){
                 alert("you are enter wrong cv")
             }
             else{
@@ -63,6 +62,7 @@ export default class Payment extends Component {
                 let otp = Math.floor(100000 + Math.random() * 900000);   
                 otp = String(otp);
                 otp = otp.substring(0,4);
+                alert(otp)
                 axios.get(`https://www.fast2sms.com/dev/bulk?authorization=0jh4qaoEiJWONkwOujpPL86Ux5gBxV23uiwx3e1QJsG4Blz12NAKIk0isDMB&sender_id=FSTSMS&message=your online purchasing movie ticket OTP is ${otp}&variables={AA}&variables_values=5252&language=english&route=p&numbers=${this.state.mobile_no}`)
                 .then(response => 
                     this.setState({otp_responce: response})  
@@ -111,7 +111,6 @@ export default class Payment extends Component {
         })
       };
     render() {
-        console.log(this.state.otp_responce)
         return (
             <div className={Style.body}>
                 <Card className={Style.root}>
@@ -130,7 +129,7 @@ export default class Payment extends Component {
                                 <p>Congratulation! <br></br>Your payment is successfull</p>
                             </div>
                             <div className={Style.next_btn}>
-                                <Link href="/user_info" style={{color:"white"}} underline="none">
+                                <Link to="/user_info" style={{color:"white", textDecoration:"none"}}>
                                     <Button variant="contained" color="primary">Ticket</Button>
                                 </Link>
                             </div>
@@ -150,11 +149,11 @@ export default class Payment extends Component {
                                             </div>
                                             <div className={Style.textfield_div}>
                                                 <Typography className={Style.instructions}>Card No:</Typography>
-                                                <TextField  label="Enter your 12 Digit card No" variant="outlined" type="text" onChange={this.handleChange} name="card_no"/>
+                                                <TextField  label="Enter your 12 Digit card No" variant="outlined" type="number" onChange={this.handleChange} name="card_no"/>
                                             </div>
                                             <div className={Style.expire_cv}>
                                                 <TextField style={{width:"70px", height:"30px"}} label="MM/YY" variant="outlined" type="text" onChange={this.handleChange} name="card_exp"/>
-                                                <TextField style={{width:"70px", height:"30px"}} label="Cv" variant="outlined" type="text" onChange={this.handleChange} name="card_cv"/>
+                                                <TextField style={{width:"70px", height:"30px"}} label="Cv" variant="outlined" type="number" onChange={this.handleChange} name="card_cv"/>
                                             </div>
                                         </div>
                                     
@@ -168,7 +167,7 @@ export default class Payment extends Component {
                                             </div>
                                             <div className={Style.textfield_mob}>
                                                 <Typography className={Style.instructions}>Mobile No:</Typography>
-                                                <TextField  label="Enter your mobile no" variant="outlined" type="text" onChange={this.handleChange} name="mobile_no"/>
+                                                <TextField onChange={this.handleChange} name="mobile_no" type="number"></TextField>
                                             </div>
                                         </div>
                                     )
@@ -179,7 +178,7 @@ export default class Payment extends Component {
                                             </div>
                                             <div className={Style.textfield_mob}>
                                                 <Typography className={Style.instructions}>Verify OTP:</Typography>
-                                                <TextField  label="Enter OTP" variant="outlined" type="text" onChange={this.handleChange} name="mobile_otp"/>
+                                               <TextField onChange={this.handleChange} type="number" name="mobile_otp"></TextField>
                                             </div>
                                         </div>
                                     )

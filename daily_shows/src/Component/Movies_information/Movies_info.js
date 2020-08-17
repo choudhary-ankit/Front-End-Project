@@ -3,7 +3,7 @@ import Style from './Movies_info.module.css'
 import axios from 'axios'
 import Button from '@material-ui/core/Button';
 import { Typography } from '@material-ui/core'
-import { Link} from '@material-ui/core';
+import {Link} from 'react-router-dom';
 
 
 export default class Movies_info extends Component {
@@ -23,7 +23,6 @@ export default class Movies_info extends Component {
         .catch(err => console.log(err));
     }
     render() {
-        console.log(this.state.movies_info)
         return (
             <div>
                 <div className={Style.main_div}>
@@ -46,7 +45,7 @@ export default class Movies_info extends Component {
                 <div className={Style.booking_div}>
                     <div className={Style.booking_alling}>
                         <Typography variant="body1">Part of The Collection: Action/Comedy/Drama/Musical</Typography>
-                        <Link href = "/movies_hall" style={{color:"white"}} underline="none">
+                        <Link to = "/movies_hall" style={{color:"white", textDecoration:"none"}}>
                             <Button variant="contained" color="primary">Booknow</Button>
                         </Link>
                     </div>

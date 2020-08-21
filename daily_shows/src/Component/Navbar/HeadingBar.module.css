@@ -10,6 +10,7 @@
 
 }
 .search {
+    display: unset;
     position: relative;
     color: #fff;
     border-radius: 5px;
@@ -18,11 +19,44 @@
     transition: width 1s;
     width: 20%;
 }
+.topDrawerArrn{
+    
+    background-color: #24292e;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+.searchDrawerTop {
+    position: relative;
+    color: #fff;
+    border-radius: 5px;
+    border: solid 1px hsla(0,0%,100%,.125);
+    background-color: hsla(0,0%,100%,.125);
+    transition: width 1s;
+    width: 100%;
+    margin-left: 5px;
+    
+}
 .search:hover{
     background-color: whitesmoke;
     color: black;
     width: 25%;
     
+}
+.searchDrawerTop:hover{
+    background-color: whitesmoke;
+    color: black;
+    width: 110%;
+    
+}
+.searchDrawerArrn{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
 }
 .searchIcon {
     padding: 2px;
@@ -34,18 +68,45 @@
     justify-content: center;
     
 }
-.search_btn{
-    border-radius: 5px;
-    border: solid 1px hsla(0,0%,100%,.125);
-    background-color: hsla(0,0%,100%,.125);
-    color: #fff;
+.search_icon_small{
+    display: none;
 }
-.card_div{
+.search_btn{
+    display: unset;
+}
+.search_btn_drawer_top{
+    display: unset;
+}
+.drawerPaper{
+    width: 250px;
+}
+.drawerPaper_top{
+    width: 100%;
+    background-color: black;
+}
+.drawerHeader {
+    display: flex;
+    align-items: center;
+    padding: 1px;
+    justify-content: flex-end;
+}
+.list_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1px;
+    justify-content: center;
+}
+.model_appbar{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+.card_div{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-top: 5px;
+    padding: 10px;
 }
 .card_titel{
     display: flex;
@@ -54,12 +115,18 @@
 }
 .card_type{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
+.spiner{
+    display: flex;
+    margin-left: 50%;
+    margin-top: 15%;
+}
 @media only screen and (max-width: 800px) {
     .search {
+        display: none;
         position: relative;
         color: #fff;
         border-radius: 5px;
@@ -74,5 +141,11 @@
         color: black;
         width: 55%;
         
+    }
+    .search_btn{
+        display: none;
+    }
+    .search_icon_small{
+        display: unset;
     }
   }
